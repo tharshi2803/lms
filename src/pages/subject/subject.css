@@ -1,0 +1,184 @@
+.attribution { 
+    font-size: 11px; text-align: center; 
+    background-color: hsl(240, 5%, 91%);
+    padding: 8px 0 5px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  .card-wrapper {
+    min-height: 500px;
+    padding-bottom: 50px; /* footer fixed */
+    padding-top: 25px;
+  }
+  
+  p {
+    margin: 0 0 12px;
+    line-height: 1.5;
+  }
+  
+  .tgg-title h2 {
+    margin: 12px 0;
+    size: 25px;
+  }
+  
+  
+  /* generics */
+  /*================================================*/
+  
+  .content-cc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* sub card */
+  /*================================================*/
+  
+  .sub-card {
+  
+    background-color: #fff;
+    border-radius: 20px;
+  
+    max-width: 800px;
+    margin-top: 90px;
+    
+    box-shadow: 0px 60px 50px -25px rgba(0, 0, 0, 0.35);
+  }
+  
+  /* sub card: imagenes */
+  /*================================================*/
+  
+  
+  .sub-ilustrations{
+    position: relative;
+    padding-top: 30px;
+  }
+  
+  .sub-ilustrations .mobile.ilust{
+    position: absolute;
+    top:-110px;
+    left:-30px;
+    right: 0;
+    width: 500px;
+    height: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  
+  .mobile{
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  /* sub card: main */
+  /*================================================*/
+  
+  .sub-content {
+    padding: 9px 25px 3rem; 
+  }
+  
+  .sub-content h1 {
+    font-size: 32px;
+    text-align: center;
+    color: var(--primary-dark-color);
+  }
+  
+  .sub-accordion {
+    padding: 8px 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+  }
+  
+  
+  /* sub card: main title */
+  /*================================================*/
+  
+  /* checkbox tgg-title*/
+  input.tgg-title {
+    appearance: unset;
+    all:unset;
+  }
+  
+  .sub-accordion-title label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .sub-accordion-title h2{
+    font-size: 25px /*var(--font-size)*/;
+    font-weight: 200;
+    color: black;
+  }
+  
+  .sub-accordion-title span{
+    margin-left: auto;
+    transition: transform .4s ease-in-out;
+  }
+  
+  
+  /* sub card: main content */
+  /*================================================*/
+  
+  .sub-accordion-content {
+    color: var(--neutral-soft-color);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease-in-out;
+  }
+  
+  
+  /* Effects */
+  /*================================================*/
+  
+  /* main title, accordion title effects */
+  
+  .sub-accordion-title:hover h2{
+    color: var(--primary-soft-color)
+  }
+  
+  /* onclick "" */
+  .sub-accordion .tgg-title:checked + div>label>h2 {
+    font-weight: 700;
+  }
+  
+  .sub-accordion .tgg-title:checked + div>label>span {
+    will-change: transform;
+    transform: rotate(180deg);
+  }
+  
+  /* main content, acordion text effect */
+  
+  .sub-accordion .tgg-title:checked ~ .sub-accordion-content{
+    will-change: max-height;
+    max-height: 90px;
+  }
+
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
